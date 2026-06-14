@@ -1,4 +1,4 @@
-# fg-skills
+# FocalGroove Skills
 
 Agent skills for AI coding agents from Focal Groove.
 
