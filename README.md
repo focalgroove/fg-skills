@@ -2,18 +2,16 @@
 
 Agent skills for AI coding agents from Focal Groove.
 
-[![skills.sh](https://skills.sh/b/shrop/fg-skills)](https://skills.sh/shrop/fg-skills)
-
 ## Install
 
 ```bash
-npx skills add shrop/fg-skills
+npx skills add focalgroove/fg-skills
 ```
 
 To install a specific skill:
 
 ```bash
-npx skills add shrop/fg-skills --skill humanize-the-copy
+npx skills add focalgroove/fg-skills --skill humanize-the-copy
 ```
 
 Works with Claude Code, Cursor, GitHub Copilot, Cline, and [many more agents](https://skills.sh).
