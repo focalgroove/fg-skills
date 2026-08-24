@@ -4,7 +4,7 @@ description: Clean assistant-generated or AI-suspected writing so it reads more 
 license: MIT
 metadata:
   author: focalgroove
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Humanize The Copy
@@ -28,6 +28,15 @@ When given text to clean:
 
 Do not simply delete banned phrases if deletion makes the sentence awkward. Rewrite the sentence so it still reads naturally.
 
+## Preserving Substance
+
+Humanizing is a rewrite pass, not a content cut. The copy should get simpler, not thinner.
+
+- Keep citations, source names, and links exact. Do not paraphrase a source name or drop a link to tighten a sentence.
+- Keep specific numbers and claims intact. Simplify the sentence around a fact, not the fact itself.
+- Keep the required point of view intact. If the piece speaks as the company, it stays in the company voice. If it speaks as a named person, it stays in that person's voice.
+- Tighten the delivery without softening the argument. Fewer words should make the point land harder, not hedge it.
+
 ## Output Rules
 
 - Do not use em dashes.
@@ -38,6 +47,7 @@ Do not simply delete banned phrases if deletion makes the sentence awkward. Rewr
 - Avoid excessive bolding.
 - Do not add meta-commentary such as "Here is the cleaned version."
 - Do not mention AI detection or LLMs in the cleaned copy unless the source text is explicitly about those topics.
+- For social and message-style copy (LinkedIn, Slack, email), prefer short paragraphs of 2 to 4 sentences so the copy stays scannable. Do not force every paragraph to the same length. Uniformity is itself an AI tell.
 
 ## Phrase Patterns to Remove or Rewrite
 
@@ -101,7 +111,7 @@ Avoid or reduce:
 - just a reminder
 - as I mentioned
 
-Use hedging only when it is factually necessary.
+Use hedging only when it is factually necessary. A small natural hedge ("honestly," "for what it's worth," "we've noticed") can still read more human than flat certainty on every line. The goal is cutting throat-clearing filler, not cutting all personality.
 
 ### Corporate Filler
 
@@ -137,6 +147,8 @@ Avoid:
 - step-by-step
 - here are some options
 - there are a few key
+
+Also avoid restating the headline number or claim a second time as a labeled "takeaway" sentence at the end of a piece. State the point once and trust the reader.
 
 ## Structural AI Tells to Fix
 
@@ -179,6 +191,7 @@ AI copy often feels too evenly paced. Fix this by:
 - allowing occasional asymmetry
 - removing unnecessary transitions
 - avoiding perfectly balanced clauses in every paragraph
+- breaking up any paragraph where every sentence follows the same subject-verb-subject-verb shape
 
 Do not make the writing sloppy. Make it less mechanical.
 
@@ -222,6 +235,9 @@ Avoid motivational or thought-leadership phrasing such as:
 - unpopular opinion
 - read that again
 - the truth is
+- that's the difference
+- full stop
+- every time. (as a standalone rhetorical closer)
 
 ## Rewrite Preferences
 
@@ -234,6 +250,7 @@ Prefer:
 - natural rhythm
 - human-level imperfection
 - direct edits over explanation
+- trailing into one specific, concrete example instead of stating a general principle, when the format allows it
 
 Avoid:
 
@@ -287,6 +304,22 @@ Better:
 - Do not overuse semicolons.
 - Avoid colon-heavy setup lines like "The result:" unless they fit the user's style.
 
+## When This Applies
+
+Apply this skill by default to external and semi-external copy:
+
+- LinkedIn and other social posts
+- Slack messages meant to read naturally
+- outbound email copy
+- ad and landing page copy
+
+Do not apply it to internal structured content where consistent structure is the goal rather than personality:
+
+- task lists
+- code comments
+- technical documentation
+- structured data output
+
 ## Quality Check
 
 Before final output, check that:
@@ -298,6 +331,8 @@ Before final output, check that:
 - the structure does not look like a default AI answer
 - the tone matches the user's original intent
 - the copy is shorter or clearer than the input unless expansion was requested
+- any citation, number, or claim from the original is still present and accurate
+- if the piece needed a specific voice (company vs. personal, for example), that voice still comes through
 
 ## Optional Post-Processing Script
 
